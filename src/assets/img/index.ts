@@ -1,0 +1,10 @@
+import avt from './avt.jpg';
+import footer from './logo_text.png';
+import product1 from './product1.jpg';
+import detail1 from './detail1.jpg';
+import plhd from './placeholder.png';
+import me from './me.png';
+import loginBanner from './loginbanner.png';
+import logoLogin from './logo_login.png';
+import product2 from './product2.jpg';
+export { avt, footer, product1, detail1, plhd, me, loginBanner, logoLogin, product2 };

@@ -1,0 +1,22 @@
+@use 'scss/index.scss' as *;
+.confirm {
+    &__header {
+        width: 100%;
+        @include flex();
+        background-color: var(--background-lightest-color);
+        border-bottom: 1px solid var(--border-color);
+        padding: 13px 15px;
+        position: relative;
+        & > h1 {
+            color: var(--text-color);
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+        & > svg {
+            position: absolute;
+            left: 15px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

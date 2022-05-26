@@ -1,0 +1,55 @@
+@use 'scss/index.scss' as *;
+.nav {
+    width: 480px;
+    height: 58px;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgb(46 46 46 / 4%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 15px 30px;
+    &__item {
+        @include flex();
+        flex-direction: column;
+        position: relative;
+        height: 58px;
+        cursor: pointer;
+        &.active {
+            &::after {
+                width: 50px;
+            }
+            & > span {
+                color: var(--primary-color);
+            }
+            & > svg {
+                color: var(--primary-color);
+            }
+        }
+        &::after {
+            height: 3.5px;
+            background-color: var(--primary-color);
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: $border-radius;
+            width: 0;
+            transition: width 0.2s ease-in-out;
+        }
+        & > svg {
+            color: var(--text-lighter-color);
+            width: 20px;
+            height: 20px;
+        }
+        & > span {
+            color: var(--text-lighter-color);
+            margin-top: 5px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+}

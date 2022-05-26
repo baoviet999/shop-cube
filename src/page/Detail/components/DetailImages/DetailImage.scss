@@ -1,0 +1,35 @@
+@use 'scss/index.scss' as *;
+.detail {
+    &__header {
+        position: absolute;
+        top: 0;
+        width: 480px;
+        padding: 20px 16px;
+        z-index: 1000;
+        @include flex();
+        justify-content: space-between;
+        &--icon {
+            @include flex();
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            border-radius: 50%;
+            color: #ddd;
+            background: #2a2a2ab7;
+            & > svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    &__images {
+        width: 100%;
+        position: relative;
+    }
+    &__image {
+        padding-top: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,131 @@
+@use 'scss/index.scss' as *;
+.product-list {
+    &__header {
+        width: 100%;
+        margin-top: 12px;
+        @include flex(space-between);
+        border-bottom: 1px solid var(--border-color);
+        padding: 0 15px;
+        & > h4 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 20px;
+            padding: 10px 0;
+            color: var(--text-color);
+        }
+    }
+    &__filter {
+        display: flex;
+        align-items: center;
+        &--list {
+            display: flex;
+            padding: 2px;
+            margin-right: 15px;
+            background-color: var(--border-color);
+            border-radius: 6px;
+        }
+        &--item {
+            border-radius: 4px;
+            padding: 0 8px;
+            transition: all 0.2s ease-in-out;
+            &.active {
+                background: var(--background-lightest-color);
+            }
+        }
+    }
+    &__option {
+        align-items: center;
+        display: flex;
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        font-weight: 500;
+        font-size: 16px;
+        color: #7f7f7f;
+        & > svg {
+        }
+    }
+    &__items {
+        padding: 0 15px;
+        &.active {
+            .product-item {
+                flex-direction: column;
+                position: relative;
+                border-bottom: unset;
+                & > img {
+                    width: 220px;
+                    height: 220px;
+                    border-radius: $border-radius;
+                    object-fit: contain;
+                    margin-right: 15px;
+                }
+                &__content {
+                    width: 100%;
+                    margin-top: 5px;
+                    padding: 8px 12px;
+                    margin-right: 0;
+                    & > h4 {
+                        font-size: 1.5rem;
+                        line-height: 20px;
+                        color: var(--text-light-color);
+                        font-weight: 500;
+                    }
+                    & > span {
+                        font-size: 1.1rem;
+                        line-height: 15px;
+                        color: #a9a9a9;
+                        margin-top: 5px;
+                    }
+                }
+                &__status {
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 95px;
+                    left: 10px;
+                    &--item {
+                        display: flex;
+                        align-self: center;
+                        font-size: 1.1rem;
+                        color: #fff;
+                        line-height: 20px;
+                        margin-right: 15px;
+                        & > svg {
+                            margin-right: 3px;
+                            color: #fff !important;
+                        }
+                    }
+                }
+                &__price {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    & > span {
+                        font-weight: 500;
+                        font-size: 1.7rem;
+                        line-height: 20px;
+                        color: #db6d2e;
+                    }
+                    & > svg {
+                        color: var(--primary-color);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    &__end {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0 80px 0;
+        & > span {
+            font-weight: 400;
+            font-size: 1.3rem;
+            color: #7f7f7f;
+        }
+    }
+}
+.product__filter {
+    padding: 16px;
+}

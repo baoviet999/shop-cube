@@ -1,0 +1,55 @@
+@use 'scss/index.scss' as *;
+.header {
+    position: fixed;
+    top: 0px;
+    width: 480px;
+    padding: 8px 16px;
+    z-index: 1000;
+    &__inner {
+        width: 100%;
+        @include flex();
+        justify-content: space-between;
+    }
+    &__search,
+    &__share {
+        background: var(--search-background-color);
+        color: var(--search-color);
+        transition: all 0.3s ease-out;
+        width: 46px;
+        border-radius: $border-radius;
+        @include flex();
+        & > span {
+            display: none;
+        }
+    }
+    &__icon {
+        @include flex();
+        padding: 10px;
+    }
+    &.active {
+        padding: 8px 0;
+        .header__inner {
+            background-color: var(--background-light-color);
+            margin-top: -8px;
+            padding: 16px 16px 12px;
+        }
+        .header__search,
+        .header__share {
+            background-color: var(--border-color);
+            color: var(--text-color);
+        }
+        .header__search {
+            width: 100%;
+            margin-right: 12px;
+            justify-content: flex-start;
+            & > span {
+                display: block;
+                font-weight: 500;
+                font-size: 1.35rem;
+                line-height: 13px;
+                color: var(--text-lighter-color);
+                margin-left: 4px;
+            }
+        }
+    }
+}

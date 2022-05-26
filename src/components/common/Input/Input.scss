@@ -1,0 +1,46 @@
+@use 'scss/index.scss' as *;
+.input {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(145, 158, 171, 0.32);
+    border-radius: 8px;
+    padding: 0 10px 0 14px;
+    position: relative;
+    margin-bottom: 15px;
+    &.active {
+        border: 1px solid var(--primary-color);
+        & > label {
+            top: -7px;
+            font-size: 1rem;
+            background-color: #fff;
+            padding: 0 5px;
+            left: 8px;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+    }
+    & > input {
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--text-color);
+        outline: none;
+        padding: 12px 0 10px;
+        border: none;
+        background-color: transparent;
+    }
+    & > label {
+        position: absolute;
+        display: block;
+        top: 12px;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: var(--text-lighter-color);
+        padding: 0 14px;
+        pointer-events: none;
+        transition: all 50ms ease-in-out;
+        left: 0;
+    }
+}

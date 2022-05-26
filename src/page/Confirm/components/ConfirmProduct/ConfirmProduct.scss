@@ -1,0 +1,68 @@
+@use 'scss/index.scss' as *;
+.confirm {
+    &__products {
+        padding: 0 15px;
+        border-bottom: 14px solid #f6f9fc;
+        & > h4 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+    }
+    &__product {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+        &--info {
+            display: flex;
+            align-items: flex-start;
+            & > img {
+                width: 40px;
+                height: 40px;
+                border-radius: $border-radius;
+                margin-right: 8px;
+            }
+        }
+        &--name {
+            & > h3 {
+                color: var(--text-color);
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        & > h4 {
+            font-weight: 500;
+            font-size: 1.7rem;
+            line-height: 20px;
+            color: var(--text-color);
+            margin-bottom: 8px;
+        }
+        & > span {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            color: var(--text-lightest-color);
+            margin-bottom: 5px;
+        }
+    }
+    &__loadmore {
+        width: 100%;
+        @include flex();
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 17px;
+        color: var(--text-lighter-color);
+        padding: 10px 0;
+        cursor: pointer;
+    }
+}

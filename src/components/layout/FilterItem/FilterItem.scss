@@ -1,0 +1,20 @@
+@use 'scss/index.scss' as *;
+.filter-item {
+    width: 100%;
+    @include flex(space-between);
+    margin: 0;
+    padding: 20px 0;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    & > span {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    &__btn {
+        cursor: pointer;
+        & > svg {
+            color: #16884a;
+        }
+    }
+}

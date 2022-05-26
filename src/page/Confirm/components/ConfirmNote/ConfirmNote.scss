@@ -1,0 +1,8 @@
+@use 'scss/index.scss' as *;
+.confirm {
+    &__note {
+        background-color: var(--background-lightest-color);
+        padding: 20px 10px;
+        border-bottom: 50px solid #f6f9fc;
+    }
+}

@@ -1,0 +1,57 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    position: fixed;
+    bottom: 65px;
+    padding: 16px;
+    box-shadow: -12px -12px 32px rgb(0 80 40 / 10%), 12px 12px 32px rgb(0 80 40 / 10%);
+    border-radius: 8px;
+    height: 56px;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0);
+    width: 480px;
+    transition: all 0.2s ease-in-out;
+    &.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+    & > h1 {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 20px;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        position: relative;
+        & > div {
+            position: absolute;
+            width: auto;
+            height: 15px;
+            left: 14px;
+            top: -4px;
+            background: #ff4842;
+            border-radius: 7px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #fff;
+            padding: 0 4px;
+        }
+        & > svg {
+            color: #fff;
+            margin-right: 10px;
+        }
+        & > h1 {
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-top: 4px;
+        }
+    }
+}
